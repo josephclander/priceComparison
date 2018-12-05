@@ -159,4 +159,9 @@ let lowestPrices = lowestPriceInArray(grouped);
 let formattedFoodList = formatByFood(lowestPrices);
 let formattedStoreList = formatByStore(lowestPrices);
 
-console.log(formatByStore(lowestPrices));
+let finalOutput = formatByStore(lowestPrices);
+
+let pResult = document.createElement('p');
+pResult.innerHTML = finalOutput;
+
+document.querySelector('.results').appendChild(pResult);
