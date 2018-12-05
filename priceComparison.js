@@ -137,17 +137,17 @@ function formatByStore(array) {
   let storeNamesSet = new Set(storeNamesArray); // removes duplicate values
   storeNamesSet = [...storeNamesSet]; // turns a set into an iterable array
 
-  let message = "Get the cheapest products at the following stores: \n";
+  let message = "<h3>Get the cheapest products at the following stores:</h3>";
 
   for (let i = 0; i < storeNamesSet.length; i++) {
-    message += `${storeNamesSet[i]}: `
+    message += `<strong>${storeNamesSet[i]}: </strong>`;
     let matchingStores = list.filter(x => x.store == storeNamesSet[i]);
     let foodList = [];
     
     for (let j = 0; j < matchingStores.length; j++) {
       foodList.push(matchingStores[j].food);
     }
-    message += `${foodList.join(', ')}.\n`;
+    message += `${foodList.join(', ')}.</br>`;
   }
   return message;
 }
