@@ -1,0 +1,44 @@
+/* CSS VARIABLES */
+:root {
+    --shadow: 0 0 5px grey;
+    --light-blue: lightblue;
+    --borderRadius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.results {
+    max-width: 600px;
+    border: 1px solid gray;
+    min-height: 5rem;
+    margin: 3rem auto;
+    box-shadow: var(--shadow);
+}
+
+button {
+    background-color: rgb(179, 255, 218);
+    height: 2rem;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--light-blue);
+}
+
+button:active {
+    box-shadow: none;
+}
+
+button:focus {
+    text-decoration: none;
+    outline: none;
+}
