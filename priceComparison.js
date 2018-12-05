@@ -161,7 +161,10 @@ let formattedStoreList = formatByStore(lowestPrices);
 
 let finalOutput = formatByStore(lowestPrices);
 
+// add click event to the compare button
+document.querySelector('#compare').addEventListener("click", () => {
+  // Adding results to the DOM
+  document.querySelector('.results').innerHTML = finalOutput;
+})
 
 
-
-document.querySelector('.results').innerHTML = finalOutput;
