@@ -61,7 +61,8 @@ let a024 = new Item("Chicken Breast", "TJ's", 1, "lbs", 2.69);
 let a025 = new Item("Chicken Thighs", "Aldi", 1, "lbs", 1.29);
 let a026 = new Item("Potatoes", "Aldi", 5, "lbs", 2.79);
 let a027 = new Item("Mushrooms", "Aldi", 8, "oz", 1.19);
-
+let a028 = new Item("Frozen Fruit", "Target", 3, "lbs", 8.99);
+let a029 = new Item("Washing Liquid", "Target", 3, "pods", 11.99);
 
 function groupFoods(array) {
   let list = [...array];
