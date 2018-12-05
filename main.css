@@ -23,6 +23,14 @@ body {
     box-shadow: var(--shadow);
 }
 
+.resultSection {
+    padding: 0.4rem;
+}
+
+.resultSection:nth-child(2n) {
+    background-color: lightslategrey;
+}
+
 button {
     background-color: rgb(179, 255, 218);
     height: 2rem;

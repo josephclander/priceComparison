@@ -141,14 +141,14 @@ function formatByStore(array) {
   let message = "<h3>Get the cheapest products at the following stores:</h3>";
 
   for (let i = 0; i < storeNamesSet.length; i++) {
-    message += `<h4>${storeNamesSet[i]}: </h4>`;
+    message += `<div class="resultSection"><h4>${storeNamesSet[i]}: </h4>`;
     let matchingStores = list.filter(x => x.store == storeNamesSet[i]);
     let foodList = [];
     
     for (let j = 0; j < matchingStores.length; j++) {
       foodList.push(matchingStores[j].food);
     }
-    message += `<p>${foodList.join(", ")}.</p>`;
+    message += `<p>${foodList.join(", ")}.</p></div>`;
   }
   return message;
 }
