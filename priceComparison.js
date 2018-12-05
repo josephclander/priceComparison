@@ -140,14 +140,14 @@ function formatByStore(array) {
   let message = "<h3>Get the cheapest products at the following stores:</h3>";
 
   for (let i = 0; i < storeNamesSet.length; i++) {
-    message += `<strong>${storeNamesSet[i]}: </strong>`;
+    message += `<p><strong>${storeNamesSet[i]}: </strong></p>`;
     let matchingStores = list.filter(x => x.store == storeNamesSet[i]);
     let foodList = [];
     
     for (let j = 0; j < matchingStores.length; j++) {
       foodList.push(matchingStores[j].food);
     }
-    message += `${foodList.join(', ')}.</br>`;
+    message += `<p>${foodList.join(", ")}.<p>`;
   }
   return message;
 }
@@ -161,7 +161,7 @@ let formattedStoreList = formatByStore(lowestPrices);
 
 let finalOutput = formatByStore(lowestPrices);
 
-let pResult = document.createElement('p');
-pResult.innerHTML = finalOutput;
 
-document.querySelector('.results').appendChild(pResult);
+
+
+document.querySelector('.results').innerHTML = finalOutput;
